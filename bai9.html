@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ki tu co nam trong mang hay ko</title>
+</head>
+<body>
+<p>Nhap so nguyen</p>
+<input id="giaTri" type="text">
+<button onclick="add()">ADD</button>
+<p><input id="so_can_check" type="text" placeholder="nhap so can kiem tra">
+    <button onclick="demo()">Check</button>
+</p>
+<p id="ketQua"></p>
+<script>
+    let arr = [];
+    let x = 0;
+    function add() {
+        let a = document.getElementById('giaTri').value
+        arr[x] = a;
+        x++;
+        document.getElementById('giaTri').value = ''
+    }
+    function check(n) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (n == arr[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+    function demo() {
+        let n = document.getElementById('so_can_check').value
+        if (check(n) > 0) {
+            document.getElementById("ketQua").innerHTML = n + ' co nam trong mang ' + '<br>' + n + " xuat hien " + check(n) + ' lan'
+        }
+    }
+
+
+</script>
+</body>
+</html>

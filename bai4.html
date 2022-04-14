@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ki tu so</title>
+</head>
+<body>
+<input type="text" id="giaTri">
+<button onclick="check()">check</button>
+<script>
+    function check() {
+        let x= document.getElementById('giaTri').value
+
+        if (typeof x == "number") {
+            alert('true')
+        } else {
+            alert('false')
+        }
+        return;
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

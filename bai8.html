@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhap vao mang so nguyen va dao nguoc lai mang do</title>
+</head>
+<body>
+<p>Nhap so nguyen</p>
+<input id="giaTri" type="text">
+<button onclick="add()">ADD</button>
+<button onclick="reverse()">reverse</button>
+<script>
+    let arr = [];
+    let x = 0;
+
+    function add() {
+        let a = document.getElementById('giaTri').value
+        arr[x] = a;
+        x++;
+        document.getElementById('giaTri').value = ''
+    }
+
+    function reverse() {
+        for (let i = 0; i < arr.length; i++) {
+            if (i < arr.length - 1 - i) {
+                let n = arr[i];
+                arr[i] = arr[arr.length - 1 - i];
+                arr[arr.length - 1 - i] = n;
+            }
+        }
+        return arr;
+    }
+    console.log (arr)
+
+</script>
+</body>
+</html>
